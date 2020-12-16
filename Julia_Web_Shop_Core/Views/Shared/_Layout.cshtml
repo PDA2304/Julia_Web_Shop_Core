@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Fluffy Toy</title>
+    <link href="~/css/ddsmoothmenu.css" rel="stylesheet" />
+    <link href="~/css/lightbox.css" rel="stylesheet" />
+    <link href="~/css/styles.css" rel="stylesheet" />
+    <link href="~/css/templatemo_style.css" rel="stylesheet" />
+</head>
+
+<body id="home">
+
+    <div id="templatemo_wrapper">
+        <div id="templatemo_header">
+            <div id="site_title"><h1><a href="@Url.Action("Index")">Fluffy Toy</a></h1></div>
+        </div> <!-- END of header -->
+        <div id="templatemo_menu" class="ddsmoothmenu">
+            <ul>
+                <li><a href="@Url.Action("Index")" class="selected">Главная</a></li>
+                <li><a href="@Url.Action("Shoppingcart")">Корзина</a></li>
+                <li><a href="@Url.Action("Checkout")">Заказать</a></li>
+                <li><a href="@Url.Action("Contact")">Контакты</a></li>
+                <li><a href="@Url.Action("Input_Output")">Регистрация/Вход</a></li>
+            </ul>
+            <br style="clear: left" />
+        </div> <!-- end of templatemo_menu -->
+        <div class="cleaner h20"></div>
+        <div id="templatemo_main_top"></div>
+        <div id="templatemo_main">
+            <div id="content" style="width: auto; margin-left: 130px; margin-right: 100px;">
+                @RenderBody()
+            </div> <!-- END of content -->
+          
+            <div class="cleaner"></div>
+        </div> <!-- END of main -->
+
+    </div>
+</body>
+</html>

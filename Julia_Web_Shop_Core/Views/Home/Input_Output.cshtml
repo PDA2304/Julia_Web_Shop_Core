@@ -1,0 +1,67 @@
+﻿@model Julia_Web_Shop_Core.Models.Users
+@{
+    ViewData["Title"] = "Регистрация/Вход";
+}
+<style>
+    .layer1 {
+        background-color: #fc0; /* Цвет фона слоя */
+        padding: 5px; /* Поля вокруг текста */
+        float: left; /* Обтекание по правому краю */
+        width: 350px; /* Ширина слоя */
+        margin-bottom: 10px;
+    }
+
+    .layer2 {
+        background-color: #c0c0c0; /* Цвет фона слоя */
+        padding: 5px; /* Поля вокруг текста */
+        width: 350px; /* Ширина слоя */
+        float: left; /* Обтекание по правому краю */
+        margin-bottom: 10px;
+    }
+
+    .clear {
+        clear: left; /* Отмена обтекания */
+    }
+</style>
+<form asp-controller="home" asp-action="Input_Output" method="post">
+    <div class="layer1">
+        <h2 style="text-align:center">Регистрация</h2>
+        <label>Логин</label>
+        <div>
+            <input asp-for="Login" style=" width: 300px;" /><br />
+            <span asp-validation-for="Login"></span>
+        </div>
+        <label>Пароль</label>
+        <div>
+            <input asp-for="Password" style=" width: 300px;" /><br />
+            <span asp-validation-for="Password"></span>
+        </div>
+        <label>Потверждение пароля</label>
+        <div>
+            <input asp-for="PasswordConfirm" style=" width: 300px;" /><br />
+            <span asp-validation-for="PasswordConfirm"></span>
+        </div>
+        <button type="submit" style="width:100%">Регистрация</button>
+    </div>
+</form>
+<form asp-controller="home" asp-action="OutPut" method="post">
+    <div class="layer2">
+        <h2 style="text-align:center">Вход</h2>
+        <label>Логин</label>
+        <div>
+            <input asp-for="Login" style=" width: 300px;" /><br />
+            <span asp-validation-for="Login"></span>
+        </div>
+        <label>Пароль</label>
+        <div>
+            <input asp-for="Password" style=" width: 300px;" /><br />
+            <span asp-validation-for="Password"></span>
+        </div>
+        <button type="submit" style="width:100%">Вход</button>
+    </div>
+</form>
+<div class="clear"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>

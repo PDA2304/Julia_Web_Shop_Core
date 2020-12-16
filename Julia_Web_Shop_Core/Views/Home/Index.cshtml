@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Julia_Web_Shop_Core.Models.Product>
+@{
+    ViewData["Title"] = "Главная";
+}
+
+@{
+    foreach (var tovar in Model)
+    {
+        <div class="col col_14 product_gallery">
+            <a href="@Url.Action("Productdetail")"><img src="~/Assets/product/@tovar.img" alt="Product 01" /></a>
+<h3>@tovar.Name</h3>
+
+<p class="product_price">$ @tovar.prise</p>
+            <a href="shoppingcart.html" class="add_to_cart">Добавить в корзину</a>
+        </div>
+    }
+
+}
